@@ -2,5 +2,8 @@ Todo ____
 --done--list all todo till now 
 --done--add new todo
 --done--list todos with date
-remove todos of Date 
+--done--remove todos of Date
+seperate fs works
+better way for taking input
+ 
 remove particular todo
