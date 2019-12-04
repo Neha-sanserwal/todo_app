@@ -1,0 +1,6 @@
+Todo ____
+--done--list all todo till now 
+--done--add new todo
+--done--list todos with date
+remove todos of Date 
+remove particular todo
