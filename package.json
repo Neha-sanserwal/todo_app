@@ -1,0 +1,11 @@
+{
+  "name": "todo_app",
+  "version": "1.0.0",
+  "description": "an app to add your daily todos",
+  "main": "todo_app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
