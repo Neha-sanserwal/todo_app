@@ -1,7 +1,7 @@
 const { stdout } = process;
 const formatOutput = (date, todos) => {
 	formattedDateTodos = [date, ...todos].join("\n\t");
-	return formattedDateTodos;
+	return `${formattedDateTodos}\n`;
 };
 const listTodos = function(todoData) {
 	for ([date, todos] of Object.entries(todoData)) {

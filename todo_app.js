@@ -1,7 +1,7 @@
-const fs = require("fs");
 const { addTodos } = require("./src/addTodos");
 const { listTodos } = require("./src/listTodos");
 const { deleteDateTodo } = require("./src/deleteDateTodo.js");
+const { handleReadFile } = require("./src/promises");
 let actionRef = {
 	add: addTodos,
 	list: listTodos,
@@ -10,6 +10,11 @@ let actionRef = {
 
 let action = process.argv[2];
 let date = process.argv[3];
-let todo_data = fs.readFileSync("./mytodo.json", "utf8");
-let todoData = JSON.parse(todo_data);
-actionRef[action](todoData, date);
+handleReadFile
+	.then(todoData => {
+		todoData = JSON.parse(todoData);
+		actionRef[action](todoData, date);
+	})
+	.catch(err => {
+		console.log(err);
+	});
