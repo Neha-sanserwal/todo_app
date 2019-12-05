@@ -4,9 +4,9 @@ const addTodos = function(todoData) {
 	stdout.write("ENTER YOUR TODO. (Enter exit to save todos)\n");
 	stdin.on("data", function(newTodo) {
 		newTodo = newTodo.toString().trim();
-		newTodo === "exit" && process.exit(1);
 		todoData = format(newTodo, todoData);
 		fs.writeFileSync("mytodo.json", JSON.stringify(todoData));
+		stdin.pause();
 	});
 };
 const format = function(newTodo, todoData) {
